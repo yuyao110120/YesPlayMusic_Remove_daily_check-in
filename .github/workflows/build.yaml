@@ -50,7 +50,7 @@ jobs:
         run: |
           yarn --ignore-optional
           unm_version=$(node -e "console.log(require('./node_modules/@unblockneteasemusic/rust-napi/package.json').version)")
-          echo "::set-output name=unmver::${unm_version}"
+          echo "unmver=${unm_version}" >> $GITHUB-OUTPUT
         shell: bash
 
       - name: Install UNM dependencies for Windows
