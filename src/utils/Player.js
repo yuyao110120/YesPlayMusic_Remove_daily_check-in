@@ -309,11 +309,12 @@ export default class {
     );
     const trackDuration = ~~(track.dt / 1000);
     time = completed ? trackDuration : ~~time;
-    scrobble({
-      id: track.id,
-      sourceid: this.playlistSource.id,
-      time,
-    });
+    // Remove daily check-in
+    // scrobble({
+    //   id: track.id,
+    //   sourceid: this.playlistSource.id,
+    //   time,
+    // });
     if (
       store.state.lastfm.key !== undefined &&
       (time >= trackDuration / 2 || time >= 240)
