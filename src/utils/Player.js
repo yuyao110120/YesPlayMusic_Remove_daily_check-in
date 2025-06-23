@@ -3,7 +3,9 @@ import { getArtist } from '@/api/artist';
 import { trackScrobble, trackUpdateNowPlaying } from '@/api/lastfm';
 import { fmTrash, personalFM } from '@/api/others';
 import { getPlaylistDetail, intelligencePlaylist } from '@/api/playlist';
-import { getLyric, getMP3, getTrackDetail, scrobble } from '@/api/track';
+// Remove daily check-in
+// import { getLyric, getMP3, getTrackDetail, scrobble } from '@/api/track';
+import { getLyric, getMP3, getTrackDetail } from '@/api/track';
 import store from '@/store';
 import { isAccountLoggedIn } from '@/utils/auth';
 import { cacheTrackSource, getTrackSource } from '@/utils/db';
